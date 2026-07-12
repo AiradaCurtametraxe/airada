@@ -1,0 +1,401 @@
+/*index*/
+@media screen and (max-width: 768px){
+
+    #intro-video{
+        width: 360px;
+        max-width: 85%;
+    }
+
+    #logo-link{
+        width: 280px;
+        height: 200px;
+    }
+
+    .logo{
+        width: 280px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    #intro-video{
+        width: 280px;
+    }
+
+    #logo-link{
+        width: 230px;
+        height: 170px;
+    }
+
+    .logo{
+        width: 230px;
+    }
+
+}
+/* ENTRADAS (mitos, lendas, conceptos e iconas) */
+@media screen and (max-width: 992px){
+
+    .entrada-main{
+        padding: 110px 25px 60px;
+    }
+
+    .entrada-artigo h1{
+        font-size: 40px;
+    }
+
+    .carrusel-img{
+        height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .entrada-main{
+        padding: 100px 20px 50px;
+    }
+
+    .entrada-artigo h1{
+        font-size: 34px;
+    }
+
+    .entrada-bloque h2{
+        font-size: 28px;
+    }
+
+    .entrada-bloque h3{
+        font-size: 21px;
+    }
+
+    .entrada-bloque p,
+    .entrada-bloque li{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .carrusel-img{
+        height: 340px;
+    }
+
+    .carrusel-btn{
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .ficha-rapida{
+        padding: 25px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .entrada-main{
+        padding: 90px 15px 40px;
+    }
+
+    .entrada-categoria{
+        font-size: 12px;
+    }
+
+    .entrada-artigo h1{
+        font-size: 28px;
+    }
+
+    .carrusel-img{
+        height: 250px;
+        border-radius: 6px;
+    }
+
+    .carrusel-btn{
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .anterior{
+        left: 10px;
+    }
+
+    .seguinte{
+        right: 10px;
+    }
+
+    .entrada-bloque{
+        margin-bottom: 45px;
+    }
+
+    .ficha-rapida{
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .comentarios{
+        margin-top: 50px;
+        padding-top: 35px;
+    }
+
+    .comentarios h2{
+        font-size: 28px;
+    }
+
+    #form-comentarios input,
+    #form-comentarios textarea{
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    #form-comentarios textarea{
+        min-height: 150px;
+    }
+
+    #form-comentarios button{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .comentario{
+        padding: 18px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .comentarios h2{
+        font-size: 24px;
+    }
+
+    .comentario h3{
+        font-size: 16px;
+    }
+
+    .comentario p{
+        font-size: 14px;
+    }
+
+}
+
+/*iconas */
+@media(max-width:900px){
+
+    .iconas-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .iconas-grid{
+        grid-template-columns:1fr;
+    }
+
+    .iconas-titulo h1{
+        font-size:40px;
+    }
+
+}
+
+/* contacto */
+@media screen and (max-width: 992px){
+
+    .contacto-main{
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 120px 50px 60px;
+
+    }
+
+    .contacto-info{
+
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .contacto-info h1{
+
+        font-size: 3rem;
+
+    }
+
+    .contacto-info p{
+
+        max-width: 650px;
+
+    }
+
+    #form-contacto{
+
+        max-width: 650px;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .contacto-main{
+
+        padding: 110px 30px 50px;
+
+        gap: 45px;
+
+    }
+
+    .contacto-info h1{
+
+        font-size: 2.4rem;
+
+    }
+
+    .contacto-info p{
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+    .correo-contacto{
+
+        font-size: 1.2rem;
+
+    }
+
+    #form-contacto input,
+    #form-contacto textarea{
+
+        padding: 14px;
+
+        font-size: 14px;
+
+    }
+
+    #form-contacto textarea{
+
+        height: 180px;
+
+    }
+
+    #form-contacto button{
+
+        padding: 14px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .contacto-main{
+
+        padding: 100px 20px 40px;
+
+    }
+
+    .contacto-info h1{
+
+        font-size: 2rem;
+
+    }
+
+    .contacto-info p{
+
+        font-size: .95rem;
+
+    }
+
+    .correo-contacto{
+
+        font-size: 1rem;
+
+        word-break: break-word;
+
+    }
+
+}
+
+/* curta */
+@media screen and (max-width: 768px){
+
+    .curta-main{
+        padding: 90px 20px 20px;
+    }
+
+    .curta-imaxe img{
+        width: 720px;
+        max-width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .curta-main{
+        padding: 85px 15px 20px;
+    }
+
+    .curta-imaxe img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+/* home */
+
+@media screen and (max-width: 992px){
+
+    .home-main{
+        padding-top: 110px;
+    }
+
+    .home-seccion{
+        padding: 0 25px;
+    }
+
+    .slider-track .icona-card{
+        flex: 0 0 calc(50% - 15px);
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .home-main{
+        padding-top: 100px;
+    }
+
+    .home-main > .iconas-titulo h1{
+        font-size: 38px;
+    }
+
+    .home-titulo h2{
+        font-size: 30px;
+    }
+
+    .slider-track .icona-card{
+        flex: 0 0 100%;
+    }
+
+    .slider-prev,
+    .slider-next{
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+}
