@@ -459,3 +459,187 @@
     }
 
 }
+/* cabeceira */
+@media (max-width: 900px){
+
+    .header{
+        height:auto;
+        min-height:60px;
+
+        padding:12px 20px;
+
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .social{
+        order:1;
+    }
+
+    .navbar{
+        order:2;
+        width:100%;
+        height:auto;
+    }
+
+    .menu{
+        width:100%;
+        height:auto;
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+        gap:14px 20px;
+    }
+
+    .menu a{
+        font-size:12px;
+    }
+
+    .submenu{
+        top:100%;
+    }
+
+}
+
+
+@media (max-width: 600px){
+
+    .header{
+        position:relative;
+
+        padding:14px 16px;
+
+        justify-content:center;
+    }
+
+    .social{
+        width:100%;
+        justify-content:center;
+    }
+
+    .social img{
+        width:24px;
+        height:24px;
+    }
+
+    .navbar{
+        width:100%;
+    }
+
+    .menu{
+        flex-direction:column;
+        align-items:center;
+
+        gap:10px;
+    }
+
+    .menu li{
+        width:100%;
+        text-align:center;
+    }
+
+    .menu a{
+        display:block;
+        width:100%;
+
+        padding:8px 10px;
+
+        font-size:12px;
+    }
+
+    .submenu,
+    .submenu-nivel2{
+        position:static;
+
+        width:100%;
+        min-width:0;
+
+        padding:0;
+
+        box-shadow:none;
+    }
+
+    .submenu a,
+    .submenu-nivel2 a{
+        padding:8px 12px;
+        font-size:12px;
+    }
+
+    .dropdown:hover > .submenu,
+    .dropdown-submenu:hover > .submenu-nivel2{
+        display:block;
+    }
+
+}
+
+/* FOOTER RESPONSIVE */
+
+@media (max-width: 800px){
+
+    .footer{
+        height:auto;
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        padding:25px 20px;
+
+        text-align:center;
+    }
+
+    .footer-esquerda,
+    .footer-centro,
+    .footer-dereita{
+        justify-content:center;
+    }
+
+    .footer-centro{
+        height:auto;
+
+        flex-wrap:wrap;
+
+        gap:20px;
+    }
+
+    .footer-centro img:first-child{
+        height:100px;
+    }
+
+    .footer-centro img:last-child{
+        height:85px;
+    }
+
+    .copyright{
+        font-size:9px;
+    }
+
+}
+
+
+@media (max-width: 500px){
+
+    .footer{
+        padding:20px 15px;
+    }
+
+    .footer-centro{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .footer-centro img:first-child{
+        height:80px;
+    }
+
+    .footer-centro img:last-child{
+        height:70px;
+    }
+
+    .copyright{
+        font-size:8px;
+        line-height:1.5;
+    }
+
+}
