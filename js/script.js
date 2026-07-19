@@ -53,37 +53,86 @@ if (carrusel) {
     });
 }
 
-// sliders da home
-document.querySelectorAll(".slider-home").forEach((slider) => {
+/* home */
+
+document.querySelectorAll(".slider-home").forEach(function(slider) {
+
+    const viewport = slider.querySelector(".slider-viewport");
     const track = slider.querySelector(".slider-track");
     const prev = slider.querySelector(".slider-prev");
     const next = slider.querySelector(".slider-next");
 
-    if (!track || !prev || !next) return;
+    if (!viewport || !track || !prev || !next) {
+        return;
+    }
 
-    next.addEventListener("click", () => {
-        const card = track.querySelector(".icona-card");
-        if (!card) return;
+    function obterDesprazamento() {
 
-        const cardWidth = card.offsetWidth + 30;
-        track.scrollBy({
-            left: cardWidth,
+        const primeiraTarxeta =
+            track.querySelector(".icona-card");
+
+        if (!primeiraTarxeta) {
+            return viewport.clientWidth;
+        }
+
+        const estilosTrack =
+            window.getComputedStyle(track);
+
+        const separacion =
+            parseFloat(estilosTrack.gap) || 0;
+
+        return primeiraTarxeta.getBoundingClientRect().width
+            + separacion;
+    }
+
+    function actualizarFrechas() {
+
+        const desprazamentoMaximo =
+            viewport.scrollWidth - viewport.clientWidth;
+
+        prev.disabled =
+            viewport.scrollLeft <= 2;
+
+        next.disabled =
+            viewport.scrollLeft >= desprazamentoMaximo - 2;
+    }
+
+    next.addEventListener("click", function() {
+
+        viewport.scrollBy({
+            left: obterDesprazamento(),
             behavior: "smooth"
         });
+
     });
 
-    prev.addEventListener("click", () => {
-        const card = track.querySelector(".icona-card");
-        if (!card) return;
+    prev.addEventListener("click", function() {
 
-        const cardWidth = card.offsetWidth + 30;
-        track.scrollBy({
-            left: -cardWidth,
+        viewport.scrollBy({
+            left: -obterDesprazamento(),
             behavior: "smooth"
         });
+
     });
+
+    viewport.addEventListener(
+        "scroll",
+        actualizarFrechas
+    );
+
+    window.addEventListener(
+        "resize",
+        actualizarFrechas
+    );
+
+    window.addEventListener(
+        "load",
+        actualizarFrechas
+    );
+
+    requestAnimationFrame(actualizarFrechas);
+
 });
-
 
 /* fomulario - formulario */
 

@@ -356,46 +356,106 @@
 
 }
 /* home */
-
-@media screen and (max-width: 992px){
-
-    .home-main{
-        padding-top: 110px;
-    }
+@media (max-width:1100px){
 
     .home-seccion{
-        padding: 0 25px;
+        grid-template-columns:250px minmax(0, 1fr);
+        gap:35px;
+        padding:75px 30px;
     }
 
-    .slider-track .icona-card{
-        flex: 0 0 calc(50% - 15px);
+    .home-info h2{
+        font-size:40px;
+    }
+
+    .home-seccion .icona-card{
+        flex-basis:calc((100% - 24px) / 2);
+        max-width:none;
     }
 
 }
 
-@media screen and (max-width: 600px){
+
+@media (max-width:800px){
 
     .home-main{
-        padding-top: 100px;
+        padding-top:60px;
     }
 
-    .home-main > .iconas-titulo h1{
-        font-size: 38px;
+    .home-seccion{
+        grid-template-columns:1fr;
+
+        gap:50px;
+        padding:65px 25px;
     }
 
-    .home-titulo h2{
-        font-size: 30px;
+    .home-info{
+        text-align:center;
     }
 
-    .slider-track .icona-card{
-        flex: 0 0 100%;
+    .home-etiqueta{
+        max-width:400px;
+        margin:0 auto;
+    }
+
+    .home-info p{
+        max-width:500px;
+        margin:0 auto;
+    }
+
+    .ver-todo{
+        position:static;
+
+        display:block;
+
+        margin-bottom:25px;
+
+        text-align:right;
+    }
+
+}
+
+
+@media (max-width:600px){
+
+    .home-seccion{
+        padding:55px 18px;
+    }
+
+    .home-info h2{
+        font-size:36px;
+    }
+
+    .home-numero{
+        font-size:30px;
+    }
+
+    .home-categoria{
+        font-size:12px;
+    }
+
+    .slider-home{
+        grid-template-columns:38px minmax(0, 1fr) 38px;
+        gap:8px;
     }
 
     .slider-prev,
     .slider-next{
-        width: 38px;
-        height: 38px;
-        font-size: 18px;
+        width:38px;
+        height:38px;
+
+        font-size:16px;
+    }
+
+    .home-seccion .icona-card{
+        min-width:0;
+        max-width:none;
+
+        flex:0 0 100%;
+    }
+
+    .home-seccion .icona-card img{
+        height:250px;
     }
 
 }

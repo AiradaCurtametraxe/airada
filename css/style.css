@@ -677,56 +677,244 @@ body{
 
 }
 
-/* home (para que non se corte e vai centrado) */
+/* home */
 
 .home-main{
-    padding-top: 90px;
+    width:100%;
+    padding-top:60px;
+    overflow:hidden;
 }
 
-.home-main > .iconas-titulo{
-    margin-bottom: 70px;
-}
-
-.home-titulo{
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.home-titulo h2{
-    color: #484781;
-    font-size: 2rem;
-}
+/* Seccións */
 
 .home-seccion{
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 40px;
+    width:100%;
+    max-width:1400px;
+
+    margin:0 auto;
+    padding:90px 45px;
+
+    display:grid;
+    grid-template-columns:300px minmax(0, 1fr);
+    align-items:center;
+
+    gap:50px;
 }
 
+.home-seccion-alterna{
+    background-color:#f5f4fc;
+}
+
+/* Información da sección */
+
+.home-info{
+    width:100%;
+    min-width:0;
+}
+
+.home-etiqueta{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.home-numero{
+    color:#6278dc;
+
+    font-size:36px;
+    font-weight:800;
+    line-height:1;
+}
+
+.home-categoria{
+    color:var(--cor-principal);
+
+    font-size:13px;
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.home-lina{
+    height:1px;
+    min-width:50px;
+    flex:1;
+
+    background-color:#8790cd;
+}
+
+.home-info h2{
+    margin:22px 0 18px;
+
+    color:var(--cor-principal);
+
+    font-size:48px;
+    font-weight:800;
+    line-height:1.08;
+}
+
+.home-info p{
+    max-width:280px;
+
+    color:#696969;
+
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* Parte dereita */
+
+.home-contido{
+    position:relative;
+
+    width:100%;
+    min-width:0;
+}
+
+.ver-todo{
+    position:absolute;
+
+    top:-45px;
+    right:0;
+
+    color:var(--cor-principal);
+
+    font-size:13px;
+    font-weight:700;
+
+    text-decoration:none;
+}
+
+.ver-todo:hover{
+    text-decoration:underline;
+}
+
+/* Estrutura do carrusel */
+
 .slider-home{
-    width: 100%;
+    width:100%;
+    min-width:0;
+
+    display:grid;
+    grid-template-columns:46px minmax(0, 1fr) 46px;
+    align-items:center;
+
+    gap:16px;
+}
+
+.slider-viewport{
+    width:100%;
+    min-width:0;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+}
+
+.slider-viewport::-webkit-scrollbar{
+    display:none;
 }
 
 .slider-track{
-    justify-content: flex-start;
+    width:max-content;
+    min-width:100%;
+
+    display:flex;
+    align-items:stretch;
+
+    gap:24px;
+    padding:10px 0;
 }
 
-.home-titulo{
-    display: block;
-    text-align: center;
-    margin-bottom: 35px;
+/* Tarxetas da Home */
+
+.home-seccion .icona-card{
+    width:calc((100vw - 740px) / 3);
+    min-width:220px;
+    max-width:270px;
+
+    flex:0 0 calc((100% - 48px) / 3);
+
+    padding:12px 12px 20px;
+
+    scroll-snap-align:start;
+    justify-self:auto;
 }
 
-.home-titulo .entrada-categoria{
-    text-align: center;
-    margin-bottom: 10px;
+.home-seccion .icona-card img{
+    width:100%;
+    height:220px;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:6px;
 }
 
-.home-titulo h2{
-    text-align: center;
-    color: #484781;
-    font-size: 2.2rem;
-    margin: 0;
+.home-seccion .icona-card h3{
+    min-height:46px;
+
+    margin-top:16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:var(--cor-principal);
+
+    font-size:18px;
+    font-weight:800;
+    line-height:1.25;
+
+    text-align:center;
+}
+
+/* Frechas */
+
+.slider-prev,
+.slider-next{
+    width:46px;
+    height:46px;
+
+    margin:0;
+    padding:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+    border-radius:50%;
+
+    background-color:var(--cor-principal);
+    color:var(--branco);
+
+    font-size:19px;
+
+    cursor:pointer;
+
+    transition:
+        background-color .3s ease,
+        opacity .3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover{
+    background-color:#35346d;
+}
+
+.slider-prev:disabled,
+.slider-next:disabled{
+    opacity:.3;
+    cursor:default;
 }
 
 /*FICHA RÁPIDA*/
