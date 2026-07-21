@@ -643,3 +643,103 @@
     }
 
 }
+
+@media (max-width:1100px){
+
+    .zona-seccion{
+        padding-right:4%;
+        padding-left:4%;
+    }
+
+    .zona-grid{
+        gap:22px;
+    }
+
+    .zona-card{
+        grid-template-columns:40% minmax(0, 1fr);
+    }
+
+    .zona-card-info{
+        padding:24px;
+    }
+
+    .zona-card-info h3{
+        font-size:20px;
+    }
+
+}
+
+
+@media (max-width:850px){
+
+    .zonas-presentacion h1{
+        font-size:40px;
+    }
+
+    .zona-grid{
+        grid-template-columns:1fr;
+    }
+
+    .zona-card{
+        grid-template-columns:40% minmax(0, 1fr);
+    }
+
+}
+
+
+@media (max-width:600px){
+
+    .zonas-main{
+        padding-top:0;
+    }
+
+    .zonas-presentacion{
+        padding:45px 20px 35px;
+    }
+
+    .zonas-presentacion h1{
+        font-size:34px;
+    }
+
+    .zonas-introducion{
+        font-size:14px;
+    }
+
+    .zona-seccion{
+        padding:35px 18px 45px;
+    }
+
+    .zona-numero{
+        font-size:30px;
+    }
+
+    .zona-lina{
+        width:35px;
+    }
+
+    .zona-card{
+        grid-template-columns:1fr;
+    }
+
+    .zona-card-imaxe{
+        min-height:210px;
+    }
+
+    .zona-card-imaxe img{
+        height:210px;
+        min-height:210px;
+    }
+
+    .zona-card-info{
+        padding:24px 22px;
+    }
+
+    .zona-card-info h3{
+        font-size:21px;
+    }
+
+    .zona-card-info p{
+        font-size:14px;
+    }
+
+}

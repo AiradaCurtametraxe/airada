@@ -361,8 +361,251 @@ body{
 
 }
 
+/* Mitos e lendas */
+.zonas-main{
+    width:100%;
+    padding-top:60px;
+    background:#fff;
+}
 
-/* Iconas */
+.zonas-presentacion{
+    width:100%;
+    max-width:900px;
+
+    margin:0 auto;
+    padding:60px 25px;
+
+    text-align:center;
+}
+
+.zonas-categoria{
+    margin-bottom:12px;
+
+    color:var(--cor-principal);
+
+    font-size:13px;
+    font-weight:700;
+
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.zonas-presentacion h1{
+    margin:0;
+
+    color:var(--cor-principal);
+
+    font-size:58px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.zonas-decoracion{
+    width:100%;
+    max-width:520px;
+    height:1px;
+
+    margin:24px auto 34px;
+
+    background:#8790cd;
+}
+
+.zonas-introducion{
+    max-width:520px;
+    margin:auto;
+
+    color:#555;
+
+    font-size:17px;
+    line-height:1.8;
+}
+
+
+.zona-seccion{
+    padding:50px 6%;
+}
+
+.zona-seccion-alterna{
+    background:#f7f6fd;
+}
+
+.zona-contedor{
+    max-width:1450px;
+    margin:auto;
+}
+
+
+.zona-cabeceira{
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:30px;
+}
+
+.zona-numero{
+    color:#6278dc;
+
+    font-size:36px;
+    font-weight:800;
+}
+
+.zona-lina{
+    width:55px;
+    height:1px;
+
+    background:#8790cd;
+}
+
+.zona-cabeceira h2{
+    margin:0;
+
+    color:var(--cor-principal);
+
+    font-size:15px;
+    font-weight:800;
+
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.zona-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:32px;
+}
+
+.zona-card{
+    display:grid;
+    grid-template-columns:48% 52%;
+
+    min-height:260px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border:1px solid rgba(72,71,129,.12);
+    border-radius:14px;
+
+    box-shadow:0 8px 22px rgba(72,71,129,.08);
+
+    text-decoration:none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.zona-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 16px 36px rgba(72,71,129,.15);
+}
+
+.zona-card-imaxe{
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+}
+
+.zona-card-imaxe img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:transform .35s ease;
+}
+
+.zona-card:hover .zona-card-imaxe img{
+    transform:scale(1.05);
+}
+
+.zona-card-info{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    text-align:center;
+}
+
+.zona-card-info h3{
+    margin:0;
+
+    color:var(--cor-principal);
+
+    font-size:30px;
+    font-weight:800;
+    line-height:1.2;
+}
+
+/* Información da tarxeta */
+
+.zona-card-info{
+    min-width:0;
+
+    padding:28px 30px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.zona-card-info h3{
+    margin:0 0 17px;
+
+    color:var(--cor-principal);
+
+    font-size:22px;
+    font-weight:800;
+    line-height:1.25;
+}
+
+.zona-card-info p{
+    margin:0 0 20px;
+
+    color:#4f4f5c;
+
+    font-size:15px;
+    line-height:1.75;
+}
+
+/* Ligazón */
+
+.zona-enlace{
+    margin-top:auto;
+
+    display:inline-flex;
+    align-items:center;
+
+    gap:8px;
+
+    color:#6278dc;
+
+    font-size:14px;
+    font-weight:700;
+
+    text-decoration:none;
+}
+
+.zona-enlace span{
+    transition:transform .2s ease;
+}
+
+.zona-enlace:hover span{
+    transform:translateX(5px);
+}
+
+/* Iconas e conceptos */
 .iconas-main{
     width:100%;
     padding:90px 20px 100px;
